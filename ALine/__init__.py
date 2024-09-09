@@ -1,2 +1,2 @@
-from .func_trace import ALine, analyse
+from .func_trace import analyse
 from .color import Style
