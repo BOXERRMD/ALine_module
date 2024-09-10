@@ -144,24 +144,11 @@ class PrintInfos:
         """
         self.result += f"{s.ITALICS}(file {self.filename}){s.DEFAULT}\n"
 
-    def __function(self):
+    def __function(self) -> None:
+        """
+        Add function name
+        """
         self.result += f"Function : {s.color_arg(self.func_name, s.RED)}\n"
-
-
-    def __default(self) -> None:
-        """
-        Add default parameters
-        :return:
-        """
-        self.result += (f"Event: {s.color_arg(self.event, s.BLUE, s.SURROUND)}, "
-                        f"Ligne: {s.color_arg(self.line, s.YELLOW, s.BOLD)}, "
-                        f"Function : {s.color_arg(self.func_name, s.RED)}, "
-                        f"{s.ITALICS}(file {self.filename}){s.DEFAULT}\n")
-
-        self.result += f"Content line : {s.color_arg(self.sourceLine, s.LIGHT_GREY)}\n"
-
-        if self.event == 'return':
-            self.result += f"Return : {s.color_arg(self.arg, s.GREEN)}, Type : {s.color_arg(type(self.arg), s.LIGHT_GREEN)}\n"
 
 
     def __local_variables(self) -> None:
@@ -184,6 +171,23 @@ class PrintInfos:
 
 
         self.result += f"Annotations arguments :\n    {x}\n"
+
+
+    def __default(self) -> None:
+        """
+        Add default parameters
+        :return:
+        """
+        self.result += (f"Event: {s.color_arg(self.event, s.BLUE, s.SURROUND)}, "
+                        f"Ligne: {s.color_arg(self.line, s.YELLOW, s.BOLD)}, "
+                        f"Function : {s.color_arg(self.func_name, s.RED)}, "
+                        f"{s.ITALICS}(file {self.filename}){s.DEFAULT}\n")
+
+        self.result += f"Content line : {s.color_arg(self.sourceLine, s.LIGHT_GREY)}\n"
+
+        if self.event == 'return':
+            self.result += f"Return : {s.color_arg(self.arg, s.GREEN)}, Type : {s.color_arg(type(self.arg), s.LIGHT_GREEN)}\n"
+
 
 
 
