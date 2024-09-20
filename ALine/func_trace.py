@@ -13,7 +13,7 @@ def analyse(in_call: bool = True, set_line: tuple = (-1, -1), print_infos: list[
     """
     Print logs from callable lines to debug
     :param in_call: Print logs from called functions. If ``false``, only the current function was logged.
-    :param print: ``list['default', 'values']``
+    :param print: ``list['line', 'default', 'variables', 'annotation', 'event', 'filename', 'function']``
     :return: Callable
     """
 
