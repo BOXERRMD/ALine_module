@@ -22,7 +22,7 @@ setup(
         "Operating System :: Microsoft :: Windows :: Windows 10"
     ],
     install_requires=[
-        "immutable-Python-type==1.1.0"
+        "immutable-Python-type==1.1.4"
     ],
 
     packages=['ALine'],
