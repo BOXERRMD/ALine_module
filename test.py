@@ -1,6 +1,7 @@
 from ALine import analyse, Style
-@analyse(in_call=False, print_infos=['line', 'annotation', 'function', 'default'], set_line=(-1, -1))
-def test(coucou, u=None):
+
+@analyse(in_call=True, print_infos=['line', 'default', 'variables', 'annotation', 'event', 'filename', 'function'], set_line=(-1, -1))
+def test(coucou:str, u=None):
 
     print(coucou)
     if 1 == 1:

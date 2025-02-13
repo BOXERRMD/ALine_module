@@ -158,6 +158,7 @@ class PrintInfos:
         """
         x = '\n    '
         self.result += f"Variables :\n    {x.join(f'{s.color_arg(key, s.PINK)}  >>>  {s.color_arg(value, s.HIGHLIGHT_WHITE, s.BLACK)} ({s.color_arg(type(value), s.LIGHT_GREEN)})' for key, value in self.variables.items())}"
+        self.result += '\n'
 
     def __func_annotations(self) -> None:
         """
